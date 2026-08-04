@@ -79,6 +79,7 @@ body{
   font-family:var(--font-body);
   min-height: 100vh;
   min-width: 100%;
+  background: var(--gradient-1);
 }
 
 .parent-container{
@@ -110,12 +111,13 @@ body{
 .info-and-input-container{
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   padding-block-start: calc(65 / 16 * 1rem);
   padding-inline: calc(35 / 16 * 1rem);
-  width: calc(375 / 16 * 1rem);
+  width: 100%;
   gap: calc(25 / 16 *  1rem);
+  height: 100%;
 }
 
 .title{
@@ -124,10 +126,102 @@ body{
   letter-spacing: 0.25em;
 }
 
+.styled-text{
+  // applying gradient as the background
+  background: var(--gradient-2);
+  // clipping background to the text
+  -webkit-background-clip: text;
+  background-clip: text;
+  color:transparent;
+  // for Safari compatability
+  -webkit-text-fill-color: transparent;
+  font-weight: 300;
+}
+
 .paragraph{
   text-align: center;
   font-size: calc(14.3 / 16 * 1rem);
   line-height: 1.45em;
+  color:var(--primary-pink-400)
 }
+
+.subscribe-form{
+  position: relative;
+  margin-block-end: calc(100 / 16 * 1rem);
+  display: flex;
+  flex-direction: column;
+  width: min(100%, clamp(15rem, 72vw, 27rem));
+  align-items: center;
+}
+
+.email-input{
+  border: 1px solid var(--primary-pink-400);
+  height: calc(47 / 16 * 1rem);
+  // clamp for adjusting to smaller viewports and scale higher in mobile & tab devices
+  width: 100%;
+  padding-inline: calc(20 / 16 * 1rem);
+  margin-block-start: calc(8 / 16 * 1rem);
+  border-radius: calc(32 / 16 * 1rem);
+  font-size: calc(14 / 16 * 1rem);
+}
+
+.email-input.error{
+  border: 2px solid var(--primary-red-500);
+  background-image: url(images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right 3.8rem center;
+  background-size: calc(20 / 16 * 1rem);
+}
+
+.email-input::placeholder{
+  color: var(--primary-pink-400);
+}
+
+.error-message{
+  font-size: calc(13 / 16 * 1rem);
+  margin-block-start: calc(10 / 16 * 1rem);
+  color: var(--primary-red-500);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.error-message.show{
+  opacity:1;
+}
+
+.submit-button{
+  position: absolute;
+  right: 0;
+  width: calc(62 / 16 * 1rem);
+  height: calc(47 / 16 * 1rem);
+   // applying gradient as the background
+  background: var(--gradient-2);
+  display: grid;
+  place-items: center;
+  border: none;
+  margin-block-start: calc(8 / 16 * 1rem);
+  border-radius: calc(32 / 16 * 1rem);
+  transition: transform 0.3s ease;
+}
+
+//hover state
+.submit-button:hover{
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+  transform: translateX(2px);
+  cursor: pointer;
+}
+
+.button-img{
+  height: calc(20 / 16 * 1rem);
+  width: calc(15 / 16 * 1rem);
+}
+
+// focus states
+.email-input:focus, .submit-button:focus{
+  outline: 1px solid var(--primary-pink-400);
+  outline-offset: 0;
+}
+
+
 
 
