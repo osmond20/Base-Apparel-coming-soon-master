@@ -102,7 +102,7 @@ body {
   background-image: url(images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 15.625rem;
+  height: clamp(15.625rem, 72vw, 40rem);
   width: 100%;
 }
 
@@ -111,8 +111,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-block-start: 4.0625rem;
-  padding-inline: 2.1875rem;
+  padding-block-start: min(4.0625rem, clamp(4.0625rem, 72vw, 6rem));
+  padding-inline: min(1.875rem, clamp(1.875rem, 72vw, 10rem));
   width: 100%;
   gap: 1.5625rem;
   height: 100%;
@@ -154,6 +154,7 @@ body {
   height: 2.9375rem;
   width: 100%;
   padding-inline: 1.25rem;
+  padding-inline-end: 5.625rem;
   margin-block-start: 0.5rem;
   border-radius: 2rem;
   font-size: 0.875rem;
@@ -181,6 +182,7 @@ body {
   color: var(--primary-red-500);
   opacity: 0;
   transition: opacity 0.3s ease;
+  padding-inline: 1.5625rem;
 }
 
 .error-message.show {
@@ -212,7 +214,7 @@ body {
   width: 0.9375rem;
 }
 
-.email-input:focus, .submit-button:focus {
+.email-input:focus {
   outline: 1px solid var(--primary-pink-400);
-  outline-offset: 0;
+  outline-offset: 0.1em;
 }/*# sourceMappingURL=styles.css.map */
