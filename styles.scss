@@ -73,6 +73,7 @@ ol {
 
 body{
   display: flex;
+  flex-direction: column;
   justify-content: start;
   align-items: start;
   font-size: var(--font-body-size);
@@ -80,6 +81,10 @@ body{
   min-height: 100vh;
   min-width: 100%;
   background: var(--gradient-1);
+}
+
+.header-container{
+  height: calc(85 / 16 * 1rem);
 }
 
 .parent-container{
@@ -123,7 +128,7 @@ body{
 .title{
   text-align: center;
   font-size: calc(40 / 16 * 1rem);
-  letter-spacing: 0.25em;
+  letter-spacing: min(0.25em, clamp(0.25em, 72vw, 0.26em));
 }
 
 .styled-text{
@@ -224,6 +229,80 @@ body{
   outline-offset: .1em;
 }
 
+@media(min-width: 65rem){
+  body{
+    position: relative;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 58%;
+    background-position: top -130px left -100px;
+  }
+
+  .parent-container{
+    flex-direction: row-reverse;
+  }
+
+  .logo{
+    height: 30px;
+    width: 140px;
+    margin-inline-start: calc(140 / 16 * 1rem);
+  }
+  .logo-container{
+    height: calc(150 / 16 * 1rem);
+  }
+
+  .image-container{
+    background-image: url(images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 50%;
+  }
+
+  .info-and-input-container{
+    grid-row: 2/5;
+    align-items: flex-start;
+    padding-block-start: calc(150 / 16 * 1rem);
+    padding-inline: calc(135 / 16 * 1rem);
+    gap: calc(10 / 16 * 1rem);
+  }
+
+  .title{
+    text-align: start;
+    font-size: calc(60 / 16 * 1rem);
+    height: 250px;
+    width: 300px;
+    letter-spacing: 0.26em;
+    padding-block-end: calc(20 / 16 * 1rem);
+  }
+
+  .paragraph{
+    text-align: start;
+    height: 150px;
+    width: 450px;
+    font-size: 0.95rem;
+    padding-block-end: calc(20 / 16 * 1rem);
+    line-height: 1.6em;
+  }
+
+  .subscribe-form{
+    margin-block-end: calc(65 / 16 * 1rem);
+    width: 420px;
+  }
+
+  .email-input{
+    height: calc(53 / 16 * 1rem);
+    padding-block-start: calc(5 / 16 * 1rem);
+    padding-inline: calc(26 / 16 * 1rem);
+  }
+
+  .submit-button{
+    height: calc(53 / 16 * 1rem);
+    width: calc(95 / 16 * 1rem);
+  }
+}
 
 
 
