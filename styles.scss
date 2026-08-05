@@ -234,7 +234,7 @@ body{
     position: relative;
     background-image: url(images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
-    background-size: 58%;
+    background-size: 65%;
     background-position: top -130px left -100px;
   }
 
@@ -258,21 +258,21 @@ body{
     position: absolute;
     top:0;
     height: 100%;
-    width: 50%;
+    width: 45%;
   }
 
   .info-and-input-container{
     grid-row: 2/5;
     align-items: flex-start;
     padding-block-start: calc(150 / 16 * 1rem);
-    padding-inline: calc(135 / 16 * 1rem);
-    gap: calc(10 / 16 * 1rem);
+    padding-inline: calc(110 / 16 * 1rem);
+    gap: calc(1 / 16 * 1rem);
   }
 
   .title{
     text-align: start;
     font-size: calc(60 / 16 * 1rem);
-    height: 250px;
+    height: 200px;
     width: 300px;
     letter-spacing: 0.26em;
     padding-block-end: calc(20 / 16 * 1rem);
@@ -280,7 +280,7 @@ body{
 
   .paragraph{
     text-align: start;
-    height: 150px;
+    height: 110px;
     width: 450px;
     font-size: 0.95rem;
     padding-block-end: calc(20 / 16 * 1rem);
