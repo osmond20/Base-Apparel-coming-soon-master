@@ -23,7 +23,7 @@
   src: url('fonts/josefin-sans-v34-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
+// CSS Variables
 :root{
   --primary-pink-400:hsl(0, 36%, 70%);
   --primary-red-500:hsl(0, 93%, 68%);
@@ -83,10 +83,12 @@ body{
   background: var(--gradient-1);
 }
 
+// HEADER
 .header-container{
   height: calc(85 / 16 * 1rem);
 }
 
+// MAIN
 .parent-container{
   display: flex;
   flex-direction: column;
@@ -211,7 +213,7 @@ body{
   transition: transform 0.3s ease;
 }
 
-//hover state
+// HOVER STATES
 .submit-button:hover{
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
   transform: translateX(2px);
